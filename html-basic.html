@@ -87,14 +87,13 @@
       <dt>性别</dt>
       <dd>
         <label>
-          <input type="radio" name="性别">男</label>
-        <label>
-          <input type="radio" name="性别">女</label>
+          <input type="radio" name="性别" value="on" id="">男</label>
+        <input type="radio" name="性别" value="in" id="in"> <label for="in">女</label>
       </dd>
       <dt>年龄</dt>
       <dd>
-        <select name id>
-          <option value selected hidden>请选择</option>
+        <select name="age" id>
+          <option value="" selected hidden>请选择</option>
           <optgroup label="少年">
             <option value="1-6">1-6岁</option>
             <option value="6-12">6-12岁</option>
@@ -111,42 +110,40 @@
       </dd>
       <dt>生日</dt>
       <dd>
-        <input type="date">
+        <input type="date" name="birthday">
       </dd>
       <dt>生辰</dt>
       <dd>
-        <input type="time">
+        <input type="time" name="birthtime">
       </dd>
       <dt>照片</dt>
       <dd>
         <label>
           "点我上传照片，我比文件上传按钮好看"
-          <input hidden type="file" name id>
+          <input hidden type="file" name="photo" id>
         </label>
       </dd>
       <dt>肤色</dt>
       <dd>
-        <input type="color" name id></textarea>
+        <input type="color" name="skin-color" id></textarea>
       </dd>
       <dt>自我介绍</dt>
       <dd>
-        <textarea name id=cols="30" rows="10">&lt;/textarea></textarea>
+        <textarea name="selfintro" cols="25" rows="10">&lt;/textarea></textarea>
       </dd>
     </dl>
-    <fieldset disabl>
+    <fieldset disabled>
       <legend>这里面的全都禁用了</legend>
       <input type="text">
       <input type="text">
       <input type="text">
       <input type="text">
     </fieldset>
-    <button>提交</button>
+    <button type="submit">提交</button>
     <button type="reset">重置</button>
   </form>
   <hr>
-  <a name="bottom"></a>
-  <hr>
-  <table border="">
+  <table border>
     <caption>货品列表</caption>
     <col>
     <col bgcolor="red">
@@ -205,6 +202,7 @@
     <br>
     &lt;span>&lt;/span>
   </div>
+  <a name="#bottom"></a>
 </body>
 
 </html>
