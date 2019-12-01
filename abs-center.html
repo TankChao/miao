@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      margin: 0;
+    }
+
+    body {
+      width: 600px;
+      margin: 0px auto 0px auto;
+
+    }
+
+    body>div {
+      height: 100px;
+      width: 400px;
+      background-color: burlywood;
+      margin: 100px auto 100px auto;
+    }
+
+    .s1 {
+      display: inline-block;
+      background-color: green;
+      width: 50px;
+      height: 50px;
+      margin: 25px 175px 25px 175px;
+    }
+
+    .sr {
+      background-color: green;
+      display: block;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      top: 25px;
+      left: 175px;
+    }
+
+    .d4 {
+      position: relative;
+    }
+
+    .sa {
+      background-color: green;
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 25px;
+      left: 175px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <p>center</p>
+  <div class="d1"><span class="s1"></span></div>
+  <br>
+
+  <p>relative</p>
+  <div class="d3"><span class="sr"></span></div>
+  <br>
+  <p>absolute</p>
+  <div class="d4"><span class="sa"></span></div>
+</body>
+
+</html>
