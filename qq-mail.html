@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+<style>
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
+
+  div {
+    font-size: 0;
+    height: 100%;
+  }
+
+  div * {
+    font-size: 16px;
+  }
+
+  header {
+    background-color: blue;
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+  }
+
+  aside {
+    background-color: red;
+    width: 150px;
+    display: inline-block;
+    height: calc(100% - 150px);
+    vertical-align: top;
+  }
+
+  section {
+    display: inline-block;
+    margin-left: -150px;
+    width: 100%;
+    height: calc(100% - 150px);
+    position: relative;
+    z-index: -1;
+    vertical-align: top;
+  }
+
+  main {
+    font-size: 2em;
+    background-color: yellow;
+    margin-left: 150px;
+    height: 100%;
+  }
+</style>
+
+</head>
+
+<body>
+  <div>
+    <header>a</header>
+    <aside>b</aside>
+    <section>
+      <main>c</main>
+    </section>
+  </div>
+</body>
