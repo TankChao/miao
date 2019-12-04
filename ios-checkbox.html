@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .ios {
+      width: 500px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .ios input {
+      display: none;
+    }
+
+    .ios input+label {
+      display: inline-block;
+      box-sizing: border-box;
+      position: relative;
+      width: 270px;
+      height: 155px;
+      border: 3px solid #cdcdcd;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: .3s;
+
+    }
+
+    .ios input:checked+label {
+      border-width: 65px;
+      background-color: #55dd67;
+      border-color: #55dd67;
+    }
+
+    .ios input+label::before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: 130px;
+      height: 130px;
+      box-shadow: 0 0 10px 8px grey;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 200px;
+      transition: .3s;
+      top: 10px;
+      left: 12px;
+
+    }
+
+    .ios input:checked+label::before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      top: -53px;
+      left: 65px;
+    }
+
+    .radiobox {
+      width: 500px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .radiobox label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 4px solid black;
+      border-radius: 50px;
+      position: relative;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .radiobox input:checked+label {
+      border-color: #04c161;
+    }
+
+    .radiobox label::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-radius: 30px;
+      top: 0px;
+      bottom: 0;
+      right: 0px;
+      left: 0px;
+      margin: auto;
+      position: absolute;
+      background-color: black;
+      transition: .3s;
+    }
+
+    .radio-i:checked+.radio-l::before {
+      width: 30px;
+      height: 30px;
+      background-color: #04c161;
+    }
+
+    span {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: bold;
+      white-space: nowrap;
+      position: relative;
+      left: 100px;
+    }
+
+    .radiobox input {
+      display: none;
+    }
+
+    .radiobox label {
+      margin: 20px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="ios">
+    <input type="checkbox" name="" id="up">
+    <label for="up"></label>
+  </div>
+
+  <div class="radiobox">
+    <input type="radio" name="radio" id="a1" class="radio-i">
+    <label for="a1" class="radio-l"><span>Radio Button</span></label>
+    <br>
+    <input type="radio" name="radio" id="a2" class="radio-i">
+    <label for="a2" class="radio-l"><span>Radio Button</span></label>
+    <br>
+    <input type="radio" name="radio" id="a3" class="radio-i">
+    <label for="a3" class="radio-l"><span>Radio Button</span></label>
+  </div>
+
+</body>
+
+</html>
