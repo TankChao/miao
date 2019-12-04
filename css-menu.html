@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      color: white;
+    }
+
+    ul li {
+      white-space: nowrap;
+      position: relative;
+      background-color: #2e3c46;
+    }
+
+    ul.menu>li {
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    ul.menu>li:hover {
+      background-color: rgb(65, 86, 104);
+    }
+
+    ul.menu ul li {
+      padding: 10px 20px;
+    }
+
+    ul.menu ul li:hover {
+      background-color: #094771;
+    }
+
+    ul ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+
+    ul ul ul {
+      left: 100%;
+      top: 0;
+    }
+
+    li:hover>ul {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>保存
+          <ul>
+            <li>C盘</li>
+            <li>桌面</li>
+            <li>默认</li>
+          </ul>
+        </li>
+        <li>另存为
+          <ul>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+          </ul>
+        </li>
+        <li>全部保存
+          <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+            <li>ddd</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>编辑
+      <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+      </ul>
+    </li>
+    <li>选择
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
