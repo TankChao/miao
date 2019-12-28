@@ -1,0 +1,132 @@
+<script type="x1" id="ch0103/01">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var r = a + b
+  console.log(r)
+</script>
+<script type="x2" id="ch0103/02">
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var r = a * c + b * c
+  console.log(r)
+</script>
+<script type="x3" id="ch0103/03">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var d = (a + b) / c - 0.5
+  var f = d.toFixed(0)
+  console.log(Math.abs(f))
+</script>
+<script type="x4" id="ch0103/04">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = a / b - 0.5
+  var d = c.toFixed(0)
+  var e = a % b
+  console.log(Math.abs(d))
+  console.log(e)
+</script>
+<script type="x5" id="ch0103/05">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = a / b
+  var d = c.toFixed(9)
+  console.log(d)
+</script>
+<script type="x6" id="ch0103/06">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = b / a * 100
+  var d = c.toFixed(3)
+  console.log(d + '%')
+</script>
+<script type="x7" id="ch0103/07">
+  var x = Number(prompt())
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var d = Number(prompt())
+  var f = a * x * x * x + b * x * x + c * x + d
+  var m = f.toFixed(7)
+  console.log(m)
+</script>
+<script type="x8" id="ch0103/08">
+  var f = Number(prompt())
+  console.log((c = 5 * (f - 32) / 9).toFixed(5))
+</script>
+<script type="x9" id="ch0103/09">
+  var r = Number(prompt())
+  console.log((l = r * 2).toFixed(4))
+  console.log((c = r * 2 * Math.PI).toFixed(4))
+  console.log((s = r * r * Math.PI).toFixed(4))
+</script>
+<script type="x9" id="ch0103/10">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  console.log((r = 1 / (1 / a + 1 / b)).toFixed(2))
+</script>
+<script type="x9" id="ch0103/11">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  console.log((c = a % b).toFixed(4))
+</script>
+<script type="x9" id="ch0103/12">
+  var r = Number(prompt())
+  console.log('π=π球的体积 V =' + (v = 4 / 3 * Math.PI * r * r * r).toFixed(2))
+  console.log('π=3.14球的体积 V =' + (v = 4 / 3 * 3.14 * r * r * r).toFixed(2))
+</script>
+<script type="x9" id="ch0103/13">
+  var r = Number(prompt())
+  var a = r % 10
+  var b = (r - a) % 100 / 10
+  var c = (r - b * 10 - a) / 100
+  console.log(a + '' + b + '' + c)
+</script>
+<script type="x9" id="ch0103/14">
+  var h = Number(prompt())
+  var r = Number(prompt())
+  var v = r * r * Math.PI * h / 1000
+  var x = (20 / v + 0.5).toFixed(0)
+  console.log(x)
+</script>
+<script type="x9" id="ch0103/15">
+  var n = Number(prompt())
+  var x = Number(prompt())
+  var y = Number(prompt())
+  console.log('剩余' + (n - (y / x + 0.5).toFixed(0)) + '个苹果')
+</script>
+<script type="x9" id="ch0103/16">
+  var Xa = Number(prompt())
+  var Ya = Number(prompt())
+  var Xb = Number(prompt())
+  var Yb = Number(prompt())
+  var L = Math.abs(Math.sqrt((Xa - Xb) * (Xa - Xb) + (Ya - Yb) * (Ya - Yb)))
+  console.log(L.toFixed(3))
+</script>
+<script type="x9" id="ch0103/17">
+  var X1 = Number(prompt())
+  var Y1 = Number(prompt())
+  var X2 = Number(prompt())
+  var Y2 = Number(prompt())
+  var X3 = Number(prompt())
+  var Y3 = Number(prompt())
+  var s = (X1 * Y2 + X2 * Y3 + X3 * Y1 - X1 * Y3 - X2 * Y1 - X3 * Y2) / 2
+  console.log(s.toFixed(2))
+</script>
+<script type="x9" id="ch0103/18">
+  var a1 = Number(prompt())
+  var a2 = Number(prompt())
+  var n = Number(prompt())
+  console.log(a1 + (n - 1) * (a2 - a1))
+</script>
+<script type="x9" id="ch0103/19">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  console.log(a * b)
+</script>
+<script type="x9" id="ch0103/20">
+  var n = Number(prompt())
+  console.log(Math.pow(2, n))
+</script>
