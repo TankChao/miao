@@ -32,7 +32,7 @@ var tankchao = {
 	},
 	compact: function (array) {
 		var result = []
-		for (var i = 0; i < array, length; i++) {
+		for (var i = 0; i < array.length; i++) {
 			if (array[i]) {
 				result.push(array[i])
 			}
