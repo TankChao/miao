@@ -50,6 +50,7 @@ var tankchao = {
 		return result
 	},
 
+
 	drop: function (array, n = 1) {
 		var result = array.slice(n))
 		return result
