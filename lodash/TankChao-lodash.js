@@ -1,4 +1,4 @@
-var TankChao = {
+var tankchao = {
 	isNull: function (val) {
 		if (val === null) {
 			return true
@@ -91,8 +91,9 @@ var TankChao = {
 		for (var i = 0; i < array.length; i++) {
 			if (!array[i].isArray) {
 				result.push(array[i])
+				return
 			} else {
-				array[i].flattenDeep
+				tankchao.flattenDeep(array[i])
 			}
 		}
 		return result
