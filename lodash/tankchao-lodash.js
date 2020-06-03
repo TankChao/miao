@@ -25,7 +25,7 @@ var tankchao = {
 			result.push(array.slice(size * n))
 			a.push(result)
 		}
-		return a
+		return result
 	},
 	compact: function (array) {
 		var result = []
