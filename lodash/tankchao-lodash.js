@@ -19,14 +19,14 @@ var tankchao = {
 		var l = array.length
 		var n = Math.floor(l / size)
 		for (var i = 0; i < n; i++) {
-			result.push(array.slice(0, size * n))
+			result.push(array.slice(i * size, i * size + size))
 			a.push(result)
-			result.pop()
+			result = []
 		}
 		if (l !== size * n) {
 			result.push(array.slice(size * n))
 			a.push(result)
-			result.pop()
+			result = []
 		}
 		return a
 	},
