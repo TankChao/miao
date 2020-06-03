@@ -13,6 +13,7 @@ var tankchao = {
 			return false
 		}
 	},
+
 	chunk: function (array, size = 1) {
 		var result = []
 		var l = array.length
@@ -26,6 +27,7 @@ var tankchao = {
 		}
 		return result
 	},
+
 	compact: function (array) {
 		var result = []
 		for (var i = 0; i < array.length; i++) {
@@ -35,6 +37,7 @@ var tankchao = {
 		}
 		return result
 	},
+
 	difference: function (array, values) {
 		var result = []
 		for (var v = 0; v < values.length; v++) {
@@ -46,10 +49,12 @@ var tankchao = {
 		}
 		return result
 	},
+
 	drop: function (array, n = 1) {
 		var result = array.slice(n))
 		return result
 	},
+
 	dropRight: function (array, n) {
 		var result = []
 		var l = array.length
@@ -60,6 +65,7 @@ var tankchao = {
 			return []
 		}
 	},
+
 	fill: function (array, value, start = 0, end = array.length) {
 		var result = []
 		result.concat(array.slice(0, start))
@@ -69,6 +75,7 @@ var tankchao = {
 		result.concat(array.slice(end))
 		return result
 	},
+
 	flatten: function (array) {
 		var result = []
 		for (var i = 0; i < array.length; i++) {
@@ -82,6 +89,7 @@ var tankchao = {
 		}
 		return result
 	},
+
 	flattenDeep: function (array) {
 		var result = []
 		for (var i = 0; i < array.length; i++) {
@@ -94,4 +102,5 @@ var tankchao = {
 		}
 		return result
 	},
+
 }
