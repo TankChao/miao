@@ -63,17 +63,17 @@ var tankchao = {
 	},
 	fill: function (array, value, start = 0, end = array.length) {
 		var result = []
-		result.push(array.slice(0, start))
+		result.concat(array.slice(0, start))
 		for (var i = start; i < array.length - 1; i++) {
-			result.push(array[i])
+			result.push(value)
 		}
-		result.push(array.slice(end))
+		result.concat(array.slice(end))
 		return result
 	},
 	flatten: function (array) {
 		var result = []
 		for (var i = 0; i < array.length; i++) {
-			if (!array[i].isArray) {
+			if (!(array[i].isArray)) {
 				result.push(array[i])
 			} else {
 				for (var j = 0; j < array[i].length; j++) {
