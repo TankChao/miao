@@ -40,7 +40,7 @@ var tankchao = {
 		var result = []
 		for (var v = 0; v < values.length; v++) {
 			for (var a = 0; a < array.length; a++) {
-				if (array[a] == values[v]) {
+				if (array[a] !== values[v]) {
 					result.push(array[a])
 				}
 			}
@@ -48,14 +48,14 @@ var tankchao = {
 		return result
 	},
 	drop: function (array, n = 1) {
-		var result = []
-		return result.push(array.slice(n))
+		var result = array.slice(n))
+		return result
 	},
 	dropRight: function (array, n) {
 		var result = []
 		var l = array.length
 		if (l > n) {
-			result.push(array.slice(0, l - n))
+			result = array.slice(0, l - n)
 			return result
 		} else {
 			return []
