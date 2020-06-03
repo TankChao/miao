@@ -13,20 +13,23 @@ var TankChao = {
 			return false
 		}
 	},
-	chunk: function (ary, size) {
+	chunk: function (ary, size = 1) {
 		var a = []
 		var result = []
 		var l = ary.length
-		var n = Math.floor(l / 2)
+		var n = Math.floor(l / size)
 		for (var i = 0; i < n; i++) {
-			result.push(ary.slice(0, 2n))
+			result.push(ary.slice(0, size * n))
 			a.push(result)
 			result.pop()
 		}
-		if (l !== 2n) {
-			result.push(ary.slice(2n))
+		if (l !== size * n) {
+			result.push(ary.slice(size * n))
 			a.push(result)
 			result.pop()
 		}
+	},
+	compact: function (ary) {
+
 	},
 }
