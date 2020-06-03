@@ -52,7 +52,7 @@ var tankchao = {
 
 
 	drop: function (array, n = 1) {
-		var result = array.slice(n))
+		var result = array.slice(n)
 		return result
 	},
 
