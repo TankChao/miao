@@ -99,5 +99,11 @@ var tankchao = {
 		result = str.split(",")
 		return result
 	},
+	fromPairs: function (array) {
+		var result = {}
+		for (var i = 0; i < array.length; i++) {
+			result[array[i][0]] = array[i][1]
+		}
 
+	}
 }
