@@ -152,4 +152,9 @@ var tankchao = {
 
 		return result
 	},
+	join: function (array, separator = ',') {
+		var str = array.toString()
+		var re = /\,/g
+		return str.replace(re, separator)
+	},
 }
