@@ -124,5 +124,32 @@ var tankchao = {
 			result.push(-1)
 		}
 		return result[0]
-	}
+	},
+	initial: function (array) {
+		var result = []
+		result = array.slice(0, array.length - 1)
+		return result
+	},
+	intersection: function (...array) {
+		var result = []
+		var arg = []
+
+		for (var a = 2; a < arguments.length; a++) {
+			arg = arg.concat(arguments[a])
+		}
+		for (var i = 0; i < arguments[0].length; i++) {
+			for (var j = 0; j < arguments[1].length; j++) {
+				if (arguments[0][i] == arguments[1][j]) {
+					result.push(arguments[0][i])
+				}
+			}
+		}
+		if (result == []) {
+			return []
+		}
+		result = result.concat(arg)
+		tankchao.intersection(...result)
+
+		return result
+	},
 }
