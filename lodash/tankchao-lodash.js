@@ -105,5 +105,24 @@ var tankchao = {
 			result[array[i][0]] = array[i][1]
 		}
 
+	},
+	head: function (array) {
+		if (array.length == 0) {
+			return undefined
+		}
+		return array[0]
+	},
+	indexOf: function (array, value, fromIndex = 0) {
+		var result = []
+		for (var i = fromIndex; i < array.length; i++) {
+			if (value == array[i]) {
+				result.push(i)
+				break
+			}
+		}
+		if (result == []) {
+			result.push(-1)
+		}
+		return result[0]
 	}
 }
