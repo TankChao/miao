@@ -174,4 +174,18 @@ var tankchao = {
 		}
 		return result[0]
 	},
+	pull: function (array, ...values) {
+		var result = array
+		var str = result.join()
+		var value = []
+		for (var i = 1; i < arguments.length; i++) {
+			value.push(arguments[i])
+		}
+		for (var v = 0; v < value.length; v++) {
+			var re = new RegExp(value[v] + "\,\|\," + value[v], "g")
+			str = str.replace(re, "")
+		}
+		array = str.split(",")
+		return array
+	},
 }
