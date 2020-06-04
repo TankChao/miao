@@ -95,14 +95,8 @@ var tankchao = {
 
 	flattenDeep: function (array) {
 		var result = []
-		for (var i = 0; i < array.length; i++) {
-			if (!array[i].isArray) {
-				result.push(array[i])
-				return
-			} else {
-				tankchao.flattenDeep(array[i])
-			}
-		}
+		var str = array.toString()
+		result = str.split(",")
 		return result
 	},
 
