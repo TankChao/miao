@@ -82,7 +82,7 @@ var tankchao = {
 	flatten: function (array) {
 		var result = []
 		for (var i = 0; i < array.length; i++) {
-			if (!(array[i].isArray)) {
+			if (!(Array.isArray(array[i]))) {
 				result.push(array[i])
 			} else {
 				for (var j = 0; j < array[i].length; j++) {
