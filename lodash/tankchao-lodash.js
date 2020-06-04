@@ -58,7 +58,7 @@ var tankchao = {
 		return result
 	},
 
-	dropRight: function (array, n) {
+	dropRight: function (array, n = 1) {
 		var result = []
 		var l = array.length
 		if (l > n) {
