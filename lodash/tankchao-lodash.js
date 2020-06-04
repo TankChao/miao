@@ -157,4 +157,21 @@ var tankchao = {
 		var re = /\,/g
 		return str.replace(re, separator)
 	},
+	last: function (array) {
+		var result = []
+		result.push(array[array.length - 1])
+		return result
+	},
+	lastIndexOf: function (array, value, fromIndex = array.length - 1) {
+		var result = []
+		for (var i = fromIndex; i >= 0; i--) {
+			if (value == array[i]) {
+				result.push(i)
+			}
+		}
+		if (result.legnth == 0) {
+			result.push(-1)
+		}
+		return result[0]
+	},
 }
