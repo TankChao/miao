@@ -74,10 +74,10 @@ var tankchao = {
 	fill: function (array, value, start = 0, end = array.length) {
 		var result = []
 		result = result.concat(array.slice(0, start))
-		for (var i = start; i < array.length - 1; i++) {
+		for (var i = start; i < end - 1; i++) {
 			result.push(value)
 		}
-		result = result.concat(array.slice(end - 1))
+		result = result.concat(array.slice(end))
 		return result
 	},
 
