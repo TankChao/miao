@@ -97,8 +97,12 @@ var tankchao = {
 
 	flattenDeep: function (array) {
 		var result = []
-		var str = array.toString()
-		result = str.split(",")
+		var strs = array.toString()
+		var re = /\,/g
+		str = strs.replace(re, "")
+		for (var i = 0; i < str.length; i++) {
+			result.push(Number(str[i]))
+		}
 		return result
 	},
 	fromPairs: function (array) {
