@@ -320,4 +320,7 @@ var tankchao = {
 			return result
 		}, [])
 	},
+	identity: function (...value) {
+		return value[0]
+	},
 }
