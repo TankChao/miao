@@ -224,5 +224,16 @@ var tankchao = {
 		}
 		return result
 	},
+	sortedIndex: function (array, value) {
+		var result = []
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] < value) {
+				result.push(array[i])
+			} else {
+				result.push(value)
+			}
+		}
+		return result.indexOf(value)
+	},
 
 }
