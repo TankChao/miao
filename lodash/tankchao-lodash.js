@@ -88,7 +88,7 @@ var tankchao = {
 				result.push(array[i])
 			} else {
 				for (var j = 0; j < array[i].length; j++) {
-					result.psuh(arrar[i][j])
+					result.push(array[i][j])
 				}
 			}
 		}
