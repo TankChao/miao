@@ -16,14 +16,13 @@ var tankchao = {
 
 	chunk: function (array, size = 1) {
 		var result = []
-		var re = []
 		var l = array.length
 		var n = Math.floor(l / size)
 		for (var i = 0; i < n; i++) {
-			result = result.push(array.slice(i * size, i * size + size))
+			result.push(array.slice(i * size, i * size + size))
 		}
 		if (l !== size * n) {
-			result = result.push(array.slice(size * n))
+			result.push(array.slice(size * n))
 		}
 		return result
 	},
