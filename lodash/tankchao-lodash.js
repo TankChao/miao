@@ -284,4 +284,30 @@ var tankchao = {
 		}
 		return result
 	},
+	xor: function (...array) {
+		var va = [...array]
+		var ary
+		var result = arguments[0]
+		if (arguments.length == 1) {
+			return result
+		}
+		result = []
+		for (var i = 0; i < arguments[0].length; i++) {
+			var inda = arguments[1].indexOf(arguments[0][i])
+			if (inda == -1) {
+				result.push(arguments[0][i])
+			}
+		}
+		for (var j = 0; j < arguments[1].length; j++) {
+			var indb = arguments[0].indexOf(arguments[1][j])
+			if (indb == -1) {
+				result.push(arguments[1][j])
+			}
+		}
+		ary = result
+		result = []
+		result.push(ary).concat(va.slice(2))
+		tankchao.xor(result)
+		return result
+	},
 }
