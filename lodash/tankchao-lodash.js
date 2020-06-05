@@ -309,4 +309,12 @@ var tankchao = {
 		}
 		return result
 	},
+	filter: function (ary, test) {
+		return ary.reduce((result, item, idx, ary) => {
+			if (test(item, idx, ary)) {
+				result.push(item)
+			}
+			return result
+		}, [])
+	},
 }
