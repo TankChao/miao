@@ -7,6 +7,9 @@ var tankchao = {
 		}
 	},
 	isNaN: function (val) {
+		if (new Number(NaN) == val) {
+			true
+		}
 		if (val !== val) {
 			return true
 		} else {
