@@ -235,5 +235,19 @@ var tankchao = {
 		}
 		return result.indexOf(value)
 	},
+	union: function (...array) {
+		var result = []
+		var al = arguments.length
+
+		for (var j = 0; j < al; j++) {
+			for (var i = 0; i < arguments[j].length; i++) {
+				var reIndex = result.indexOf(arguments[j][i])
+				if (reIndex == -1) {
+					result.push(arguments[j][i])
+				}
+			}
+		}
+		return result
+	},
 
 }
