@@ -110,7 +110,7 @@ var tankchao = {
 		for (var i = 0; i < array.length; i++) {
 			result[array[i][0]] = array[i][1]
 		}
-
+		return result
 	},
 	head: function (array) {
 		if (array.length == 0) {
@@ -122,6 +122,10 @@ var tankchao = {
 		var result = []
 		for (var i = fromIndex; i < array.length; i++) {
 			if (value == array[i]) {
+				result.push(i)
+				break
+			}
+			if (array[i] !== array[i] && value !== value) {
 				result.push(i)
 				break
 			}
