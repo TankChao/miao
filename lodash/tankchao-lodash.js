@@ -249,5 +249,39 @@ var tankchao = {
 		}
 		return result
 	},
+	unionBy: function (...array) {
 
+	},
+	unzip: function (array) {
+		var result = []
+		var al = array.length
+		for (var i = 0; i < al; i++) {
+
+			for (var j = 0; j < array[i].length; j++) {
+				if (!result[j]) {
+					result[j] = []
+				}
+				result[j].push(array[i][j])
+			}
+
+		}
+		return result
+	},
+	without: function (array, ...values) {
+		var ary = []
+		var result = array
+		var argu = arguments.length
+		for (var i = 1; i < argu; i++) {
+
+			var al = result.length
+			for (var j = 0; j < al; j++) {
+				if (result[j] !== arguments[i]) {
+					ary.push(result[j])
+				}
+			}
+			result = ary
+			ary = []
+		}
+		return result
+	},
 }
