@@ -38,13 +38,15 @@ var tankchao = {
 	},
 
 	difference: function (array, ...value) {
-		var result = array
+		var result = []
 		var b = []
-		for (var v = 1; v <= arguments.length; v++) {
+		var bIdx
+		var al = array.length
+		for (var v = 1; v < arguments.length; v++) {
 			b = b.concat(arguments[v])
 		}
-		for (var a = 0; a < array.length; a++) {
-			var bIdx = b.indexOf(array[a])
+		for (var a = 0; a < al; a++) {
+			bIdx = b.indexOf(array[a])
 			if (bIdx == -1) {
 				result.push(array[a])
 			}
