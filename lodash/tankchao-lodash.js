@@ -142,25 +142,38 @@ var tankchao = {
 	},
 	intersection: function (...array) {
 		var result = []
-		var arg = []
+		var al = arguments.length
 
-		for (var a = 2; a < arguments.length; a++) {
-			arg = arg.concat(arguments[a])
+
+		if (al == 1) {
+			return arguments[0]
 		}
-		for (var i = 0; i < arguments[0].length; i++) {
-			for (var j = 0; j < arguments[1].length; j++) {
-				if (arguments[0][i] == arguments[1][j]) {
+		if (al == 2) {
+			for (var i = 0; i < arguments[0].length; i++) {
+				var tong = arguments[1].indexOf(arguments[0][i])
+				if (tong !== -1) {
 					result.push(arguments[0][i])
 				}
 			}
-		}
-		if (result == []) {
-			return []
-		}
-		result = result.concat(arg)
-		tankchao.intersection(...result)
+			return result
+		} else {
+			var as = []
+			for (var i = 0; i < arguments[0].length; i++) {
+				var tong = arguments[1].indexOf(arguments[0][i])
+				if (tong !== -1) {
+					result.push(arguments[0][i])
+				}
+			}
+			if (result == []) {
+				return []
+			}
+			as.push(result)
+			for (var a = 2; a < al; a++) {
+				as.push(arguments[a])
+			}
+			tankchao.intersection(...as)
 
-		return result
+		}
 	},
 	join: function (array, separator = ',') {
 		var str = array.toString()
@@ -168,14 +181,20 @@ var tankchao = {
 		return str.replace(re, separator)
 	},
 	last: function (array) {
-		var result = []
-		result.push(array[array.length - 1])
+		var result
+		result = array[array.length - 1]
 		return result
 	},
 	lastIndexOf: function (array, value, fromIndex = array.length - 1) {
 		var result = []
+		if (fromIndex < 0) {
+			return -1
+		}
 		for (var i = fromIndex; i >= 0; i--) {
 			if (value == array[i]) {
+				result.push(i)
+			}
+			if (value !== value && array[i] !== array[i]) {
 				result.push(i)
 			}
 		}
