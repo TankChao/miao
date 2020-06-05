@@ -297,4 +297,16 @@ var tankchao = {
 		}
 		return ary
 	},
+	zip: function (...array) {
+		var result = []
+		for (var i = 0; i < arguments[0].length; i++) {
+			result.push([])
+		}
+		for (var j = 0; j < arguments[0].length; j++) {
+			for (var k = 0; k < arguments.length; k++) {
+				result[j].push(arguments[k][j])
+			}
+		}
+		return result
+	},
 }
