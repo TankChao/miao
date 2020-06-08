@@ -425,24 +425,23 @@ var tankchao = {
 			return obj[str]
 		}
 	},
-	get: function (obj, prop) {
+	get: function (obj, prop, defaultValue) {
 		var result = obj
 		if (typeof prop === 'string') {
 			var re = /\b\w+\b/g
 			var prop = prop.match(re)
 		}
-		if (ary.length == 1) {
+		if (prop.length == 1) {
 			return obj[ary[0]]
 		}
 
 		for (let ob of prop) {
-			if (obj[ob]) {
+			if (result[ob]) {
 				result = result[ob]
 			} else {
 				return defaultValue
 			}
 		}
 		return reuslt
-
 	},
 }
