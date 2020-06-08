@@ -319,6 +319,7 @@ var tankchao = {
 			test = it => it[predicate]
 		} else if (typeof predicate === 'object') {
 			if (isArray(predicate)) {
+				predicate = tankchao.chunk(ary, 2)
 				predicate = fromPairs(predicate)
 			}
 			test = it => {
