@@ -312,6 +312,13 @@ var tankchao = {
 		}
 		return result
 	},
+	fromPairs: function (ary) {
+		var ob = {}
+		for (var i = 0; i < ary.length; i++) {
+			ob[ary[i][0]] = ary[i][1]
+		}
+		return ob
+	},
 	filter: function (ary, predicate) {
 		var test = predicate
 		if (typeof predicate === 'string') {
