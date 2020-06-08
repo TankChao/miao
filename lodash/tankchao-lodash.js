@@ -317,7 +317,9 @@ var tankchao = {
 		if (typeof predicate === 'string') {
 			test = it => it[predicate]
 		} else if (typeof predicate === 'object') {
-			predicate = fromPairs(predicate)
+			if (isArray(predicate)) {
+				predicate = fromPairs(predicate)
+			}
 			test = it => {
 				for (var key in predicate) {
 					if (predicate[key] == it[key]) {
