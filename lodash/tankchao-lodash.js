@@ -312,15 +312,91 @@ var tankchao = {
 		}
 		return result
 	},
-	filter: function (ary, test) {
-		return ary.reduce((result, item, idx, ary) => {
-			if (test(item, idx, ary)) {
-				result.push(item)
+	filter: function (ary, predicate) {
+		var test = predicate
+		if (typeof test === 'string') {
+			test = it => it[predicate]
+		} else if (typeof test === 'object') {
+			test = fromPairs(predicate)
+			test = it => {
+				for (var key in predicate) {
+					if (predicate[key] == it[key]) {
+						return true
+					}
+				}
+				return false
 			}
-			return result
-		}, [])
+
+		}
+
+		var result = []
+		for (var i = 0; i < ary.length; i++) {
+			if (test(ary[i])) {
+				result.push(ary[i])
+			}
+		}
+		return result
 	},
 	identity: function (...value) {
 		return value[0]
 	},
+	before: function (n, func) {
+		var i = 0
+		var result
+		return function (...arys) {
+			if (i <= n) {
+				i++
+				result = func(...args)
+			}
+			return result
+		}
+	},
+	after: function (n, func) {
+		var i = 0
+		return function (...args) {
+			i++
+			if (i > n) {
+				return func(...args)
+			}
+		}
+	},
+	ary: function (func, n = func.length) {
+		return function (...args) {
+			return func(...args.slice(0, n))
+		}
+	},
+	unary: function (func) {
+		return function (arg) {
+			return func(arg)
+		}
+	},
+	flip: function (func) {
+		return function (...args) {
+			return func(...(args.reverse()))
+		}
+	},
+	//把数组展开传入
+	spread: function (func) {
+		return function (arg) {
+			return func(...arg)
+		}
+	},
+	//_.bind(add, null, _, 1, 2)
+	//跳过前面的参数，绑定后面的参数
+	bind: function (f, ...fixedArgs) {
+		return function f(...args) {
+			var j = 0
+			var copy = fixedArgs.slice()
+			for (var i = 0; i < copy.length; i++) {
+				if (copy[i] === null) {
+					copy[i] = args[j++]
+				}
+			}
+			while (j < args.length) {
+				copy.push(args[j++])
+			}
+			return f(...copy)
+		}
+	},
+
 }
