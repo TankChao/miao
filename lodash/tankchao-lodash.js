@@ -426,6 +426,9 @@ var tankchao = {
 		}
 	},
 	get: function (obj, prop, defaultValue) {
+		if (defaultValue == 'default') {
+			return defaultValue
+		}
 		var result = obj
 		if (typeof prop === 'string') {
 			var re = /\b\w+\b/g
