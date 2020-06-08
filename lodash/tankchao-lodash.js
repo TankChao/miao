@@ -312,13 +312,7 @@ var tankchao = {
 		}
 		return result
 	},
-	fromPairs: function (ary) {
-		var ob = {}
-		for (var i = 0; i < ary.length; i++) {
-			ob[ary[i][0]] = ary[i][1]
-		}
-		return ob
-	},
+
 	filter: function (ary, predicate) {
 		var test = predicate
 		if (typeof predicate === 'string') {
@@ -329,11 +323,11 @@ var tankchao = {
 			}
 			test = it => {
 				for (var key in predicate) {
-					if (predicate[key] == it[key]) {
-						return true
+					if (predicate[key] !== it[key]) {
+						return false
 					}
 				}
-				return false
+				return true
 			}
 
 		}
@@ -345,6 +339,14 @@ var tankchao = {
 			}
 		}
 		return result
+
+		function fromPairs(ary) {
+			var ob = {}
+			for (var i = 0; i < ary.length; i++) {
+				ob[ary[i][0]] = ary[i][1]
+			}
+			return ob
+		}
 	},
 	identity: function (...value) {
 		return value[0]
