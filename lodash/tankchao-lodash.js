@@ -314,10 +314,10 @@ var tankchao = {
 	},
 	filter: function (ary, predicate) {
 		var test = predicate
-		if (typeof test === 'string') {
+		if (typeof predicate === 'string') {
 			test = it => it[predicate]
-		} else if (typeof test === 'object') {
-			test = fromPairs(predicate)
+		} else if (typeof predicate === 'object') {
+			predicate = fromPairs(predicate)
 			test = it => {
 				for (var key in predicate) {
 					if (predicate[key] == it[key]) {
