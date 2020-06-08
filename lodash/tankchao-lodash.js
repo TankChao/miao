@@ -410,5 +410,39 @@ var tankchao = {
 			return f(...copy)
 		}
 	},
+	matches: function (ob) {
+		return function (mubiao) {
+			for (var key in ob) {
+				if (mubiao[key] !== ob[key]) {
+					return false
+				}
+			}
+			return true
+		}
+	},
+	property: function (str) {
+		return function (obj) {
+			return obj[str]
+		}
+	},
+	get: function (obj, prop) {
+		var result = obj
+		if (typeof prop === 'string') {
+			var re = /\b\w+\b/g
+			var prop = prop.match(re)
+		}
+		if (ary.length == 1) {
+			return obj[ary[0]]
+		}
 
+		for (let ob of prop) {
+			if (obj[ob]) {
+				result = result[ob]
+			} else {
+				return defaultValue
+			}
+		}
+		return reuslt
+
+	},
 }
