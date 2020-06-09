@@ -434,9 +434,9 @@ var tankchao = {
 		if (typeof prop === 'string') {
 			var re = /\b\w+\b/g
 			ary = prop.match(re)
-		} //else if (Array.isArray(prop)) {
-		//ary = prop.slice()
-		//}
+		} else if (Array.isArray(prop)) {
+			ary = prop.slice()
+		}
 
 		if (ary.length == 1) {
 			return obj[ary[0]]
