@@ -430,21 +430,25 @@ var tankchao = {
 			return defaultValue
 		}
 		var result = obj
+		var ary
 		if (typeof prop === 'string') {
 			var re = /\b\w+\b/g
-			var prop = prop.match(re)
-		}
-		if (prop.length == 1) {
+			ary = prop.match(re)
+		} //else if (Array.isArray(prop)) {
+		//ary = prop.slice()
+		//}
+
+		if (ary.length == 1) {
 			return obj[ary[0]]
 		}
 
-		for (let ob of prop) {
-			if (result[ob]) {
+		for (let ob of ary) {
+			if (result[ob]/*ob in result*/) {
 				result = result[ob]
 			} else {
 				return defaultValue
 			}
 		}
-		return reuslt
+		return result
 	},
 }
