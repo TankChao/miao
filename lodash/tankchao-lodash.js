@@ -421,6 +421,7 @@ var tankchao = {
 		}
 	},
 	isMatch: function (obj, mubiao) {
+		//未通过，无法判定对象里面的对象
 		for (var key in mubiao) {
 			if (mubiao[key] !== obj[key]) {
 				return false
