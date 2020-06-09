@@ -420,6 +420,14 @@ var tankchao = {
 			return true
 		}
 	},
+	isMatch: function (obj, mubiao) {
+		for (var key in mubiao) {
+			if (mubiao[key] !== obj[key]) {
+				return false
+			}
+		}
+		return true
+	},
 	property: function (str) {
 		return function (obj) {
 			return obj[str]
@@ -451,4 +459,5 @@ var tankchao = {
 		}
 		return result
 	},
+
 }
