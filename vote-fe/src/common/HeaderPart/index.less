@@ -1,0 +1,58 @@
+@import '../../style/default';
+
+#root > div {
+  xbackground-color: @theme_color_A1;
+}
+
+.header {
+    background-color: @theme_color_A2;
+    height: 4.5em;
+    font-size: 1em;
+    width: @header_widthA1;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    .logo{
+      xbackground-color: @theme_color_A1;
+      height: 3em;
+      font-size: 1.2em;
+      margin-left: 2em;
+      margin-right: -2em;
+        img {
+        height: 3em;
+        vertical-align: middle;
+        }
+        span{
+          vertical-align: middle;
+        }
+    }
+
+      .items {
+        font-size: 1em;
+        
+        a {
+          margin: 0.2em 1em 0.2em 0.5em;
+        }
+      }
+
+      .search {
+        font-size: 2em;
+        margin-top: 0.4em;
+        margin-bottom: -0.4em;
+      }
+      .my-info {
+        .user-info {
+          text-align: center;
+          .user-acatar{
+            width: 3.8em;
+            height: 3.8em;
+            border-radius: 50%;
+            margin-right: 0.7em;
+          }
+          .user-name{
+            padding-bottom: 0.7em;
+          }
+        }
+      }
+}

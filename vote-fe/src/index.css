@@ -1,0 +1,32 @@
+
+@import 'antd/dist/antd.css';
+* {
+  xbackground-color: rgba(0,0,0,0.1);
+}
+
+a{
+text-decoration:none;
+color:#333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 1600px;
+
+ background-color: rgb(189, 217, 230);
+  min-height:100%;
+    margin:0;
+    padding:0;
+    position:relative;
+}
+

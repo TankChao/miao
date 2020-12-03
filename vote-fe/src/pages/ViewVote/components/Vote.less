@@ -1,0 +1,82 @@
+@import '../../../style/default.less';
+
+.content-vote {
+  width: @home_widthA1;
+  margin: auto;
+  margin-top: 1em;
+  background-color: rgb(226,239,245);
+  .vote-info {
+    h2 {
+      width: 18em;
+      font-size: 3em;
+      margin: auto;
+      margin-bottom: 0.5em;
+      text-align: center;
+    };
+    .vote-ismultiple{
+      margin-left: 3em;
+    };
+    .vote-deadline{
+      margin-left: 3em;
+    };
+    .vote-desc {
+      margin-top: 3em;
+      margin-left: 1em;
+      font-size: 1.2em;
+      text-indent: 2em;
+    letter-spacing: 0.07em;
+    }
+    .col-vote-img{
+
+      .vote-img {
+        width: 24em;
+        height: 30em;
+        margin-left: 2em;
+        border-radius: 8%
+      };
+
+    };
+    
+  };
+  .vote-options{
+    font-size: 1.3em;
+    width: 46em;
+    margin: auto;
+    .vote-option {
+      margin-top: 1.3em;
+      position: relative;
+      .vote-content{
+        margin-left: 0.7em;
+      }
+      .vote-count {
+        width: 5em;
+        position: absolute;
+        left: 47em;
+        top: 1.6em;
+      }
+      .vote-avatar {
+        width: 40em;
+        margin: auto;
+        img {
+          width: 2.4em;
+          height: 2.4em;
+          margin-right: 0.5em;
+          margin-top: 0.3em;
+          border-radius: 50%
+        }
+      }
+    }
+  };
+  .txt {
+    width: 15em;
+    text-align: center;
+    margin: auto;
+    margin-top: 8em;
+    margin-bottom: 5em;
+    font-size: 1.5em;
+    span {
+      font-size: 0.5em;
+      margin-top: -10em;
+    }
+  }
+}
