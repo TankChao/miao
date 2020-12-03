@@ -4,20 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "imageinfo": "^1.0.4",
+    "immer": "^7.0.9",
     "lodash": "^4.17.20",
     "multer": "^1.4.2",
     "open": "^7.2.1",
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
     "sqlite": "^4.0.14",
     "sqlite3": "^5.0.0",
     "svg-captcha": "^1.4.0",
     "ws": "^7.3.1"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.6"
   }
 }
